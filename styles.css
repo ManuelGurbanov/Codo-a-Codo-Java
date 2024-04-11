@@ -7,33 +7,45 @@ body{
     padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-content: center;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ff4040;
-    padding: 10px 20px;
+footer{
+    margin-top: 100px;
     color: #ffffff;
-
-    flex-direction: column;
-    align-items: center;
+    background-color: #9f3647;
 }
-
-.nav-links {
+footer a{
+    color: white;
+}
+.footerBtns{
+    margin: 30px 0 30px 0;
     display: flex;
-    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 20px;
 }
 
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    font-size: 1rem;
+.navbar{
+    background-color: #9f3647;
+}
+.navbar .nav-link {
+    color: #ffffff;
+    margin: 0 20px 0 20px;
+}
+
+.navbar .nav-link:hover {
+    color: #ffffff65;
+}
+
+#loginLink{
+    background-color: #551d26;
+    border-radius: 50px;
+}
+
+#nefliLogo:hover{
+    scale: .9;
+    transition: .1s ease-in-out;
 }
 
 #bannerContainer {
@@ -46,12 +58,25 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-
-
     height: 70vh;
 }
+#bannerContainer h1{
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+#bannerContainer h2{
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+#bannerContainer h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
 
-#movieName {
+#mainTittle {
     margin: 0;
     padding: 10px;
     font-size: 2.5rem;
@@ -59,11 +84,13 @@ body{
     color: white;
 }
 
-#movieDescription {
+#mainDescription {
     margin: 0;
     padding: 10px;
     font-size: 1.5rem;
     color: rgb(255, 255, 255);
+
+    font-weight: 200;
 }
 
 #mainBanner {
@@ -74,12 +101,44 @@ body{
 
 #registerBtn {
     font-family: "Roboto Flex", monospace;
-    background-color: #b72f2f;
+    background-color: #9f3647;
     color: white;
-    font-weight: bolder;
+    font-weight: 500;
     border-radius: 20px;
     font-size: 1rem;
-    padding: 2% 6%;
+    text-align: center;
+    width: 120px;
+    height: 60px;
+}
+
+#searcherContainer {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.input-group {
+    width: 40%;
+    height: 50px;
+}
+.input-group h1 {
+    color: white;
+    margin-bottom: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.form-control {
+    margin-right: 10px;
+}
+
+.btn {
+    background-color: #9f3647;
+    color: white;
+    border-radius: 60px;
 }
 
 #moviesSection{
@@ -92,6 +151,7 @@ body{
 #moviesSection h1{
     color: white;
     font-size: 2rem;
+    margin: 50px 0 20px 0;
 }
 
 #moviesGrid {
@@ -99,31 +159,29 @@ body{
     display: grid;
     gap: 20px;
     justify-content: center;
-    align-items: center; /* Centrar verticalmente */
+    align-items: center;
     box-sizing: border-box;
 
-    grid-template-columns: repeat(auto-fit, minmax(250px, 4fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .movie {
     position: relative;
-    width: 240px;
-    height: 360px;
-    border-radius: 10px;
-    margin: 0 auto;
+    width: 200px;
+    height: 300px;
 }
 .movie img {
     position: relative;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor manteniendo la relación de aspecto */
-    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 40px;
 }
 
 .movie:hover img {
     filter: grayscale(90%);
     filter: brightness(20%);
-    scale: 1.05;
+    scale: .92;
     transition: ease-in .15s;
 }
 .movieTittle {
@@ -134,7 +192,6 @@ body{
     top: 50%;
     left: 50%;
 
-    max-width: 20rem;
     transform: translateY(-50%) translateX(-50%);
 
     color: white;
@@ -150,16 +207,16 @@ body{
     #bannerContainer {
         height: 90vh;
     }
-
-    .navbar {
-        flex-direction: row;
-    }
-
-    #movieName {
+    #mainTittle {
         font-size: 3rem;
     }
     
-    #movieDescription {
+    #mainDescription {
         font-size: 2rem;
+    }
+
+    #registerBtn{
+        width: 140px;
+        height: 70px;
     }
 }
