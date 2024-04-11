@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(to right top, #1e1e1e73,#13131373), url(./img/bg-register.jpg);
+
+    font-family: "Roboto Flex", monospace;
+}
+
+#formSection {
+    width: 80%;
+    background-color: #1c1c1c;
+    padding: 16px;
+    border-radius: 20px;
+}
+
+#formSection h1{
+    text-align: center;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, select {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #9f3647;
+    border-radius: 15px;
+    background-color: #1c1c1c;
+    color: white;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #9f3647;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0 10px 0;
+}
+
+#termConds{
+    display: flex; 
+    align-items: center;
+}
+
+#logo{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 79px;
+    height: 28px;
+}
+
+#termConds{
+    width: 100%;
+}
+#termsCheck{
+    flex: 1;
+}
+#termCondsLabel{
+    color: white;
+    flex: 10;
+} 
+@media (min-width: 768px) {
+    #formSection {
+        width: 30%;
+    }
+    #formSection h1{
+        text-align: left;
+        /* The example pages changes text-align of the Register Tittle to left on PC, it's centered normally */
+    }
+    #logo{
+        width: 112px;
+        height: 40px;
+    }
+}

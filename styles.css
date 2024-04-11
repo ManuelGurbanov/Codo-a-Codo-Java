@@ -10,43 +10,6 @@ body{
     align-content: center;
 }
 
-footer{
-    margin-top: 100px;
-    color: #ffffff;
-    background-color: #9f3647;
-}
-footer a{
-    color: white;
-}
-.footerBtns{
-    margin: 30px 0 30px 0;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-.navbar{
-    background-color: #9f3647;
-}
-.navbar .nav-link {
-    color: #ffffff;
-    margin: 0 20px 0 20px;
-}
-
-.navbar .nav-link:hover {
-    color: #ffffff65;
-}
-
-#loginLink{
-    background-color: #9f3647;
-}
-
-#nefliLogo:hover{
-    scale: .9;
-    transition: .1s ease-in-out;
-}
-
 #bannerContainer {
     color: white;
     background: url(./img/banner.jpg);
@@ -230,9 +193,5 @@ footer a{
     #registerBtn{
         width: 140px;
         height: 70px;
-    }
-    #loginLink{
-        background-color: #551d26;
-        border-radius: 50px;
     }
 }
