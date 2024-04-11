@@ -39,8 +39,7 @@ footer a{
 }
 
 #loginLink{
-    background-color: #551d26;
-    border-radius: 50px;
+    background-color: #9f3647;
 }
 
 #nefliLogo:hover{
@@ -59,6 +58,9 @@ footer a{
     align-items: center;
     text-align: center;
     height: 70vh;
+}
+#bannerContainer h1, h2, h3{
+    animation: fadeIn 1.5s;
 }
 #bannerContainer h1{
     font-size: 3rem;
@@ -93,6 +95,10 @@ footer a{
     font-weight: 200;
 }
 
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
 #mainBanner {
     height: 100%;
     width: auto;
@@ -135,10 +141,16 @@ footer a{
     margin-right: 10px;
 }
 
-.btn {
+#searchButton {
     background-color: #9f3647;
     color: white;
     border-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-top-left-radius: 60px;
+}
+#searchButton:hover {
+    background-color: #551d26;
+    transition: ease-in .1s;
 }
 
 #moviesSection{
@@ -151,7 +163,7 @@ footer a{
 #moviesSection h1{
     color: white;
     font-size: 2rem;
-    margin: 50px 0 20px 0;
+    margin: 50px 0 50px 0;
 }
 
 #moviesGrid {
@@ -218,5 +230,9 @@ footer a{
     #registerBtn{
         width: 140px;
         height: 70px;
+    }
+    #loginLink{
+        background-color: #551d26;
+        border-radius: 50px;
     }
 }
