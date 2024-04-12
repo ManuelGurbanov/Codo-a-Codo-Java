@@ -117,6 +117,10 @@ body{
     transition: ease-in .1s;
 }
 
+.movie {
+    position: relative;
+}
+
 #moviesSection{
     display: flex;
     flex-direction: column;
