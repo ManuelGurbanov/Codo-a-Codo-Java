@@ -24,9 +24,9 @@ body{
 }
 #bannerContainer h1, h2, h3{
     animation: fadeIn 1.5s;
+    max-width: 80%;
 }
 #bannerContainer h1{
-    max-width: 70%;
     font-size: 3rem;
     font-weight: bolder;
     margin-bottom: 10px;
@@ -91,7 +91,7 @@ body{
 
 
 .input-group {
-    width: 40%;
+    width: 70%;
     height: 50px;
 }
 .input-group h1 {
@@ -124,7 +124,7 @@ body{
     align-items: center;
 }
 
-#moviesSection h1{
+h1{
     color: white;
     font-size: 2rem;
     margin: 50px 0 50px 0;
@@ -141,11 +141,6 @@ body{
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-.movie {
-    position: relative;
-    width: 200px;
-    height: 300px;
-}
 .movie img {
     position: relative;
     width: 100%;
@@ -178,6 +173,40 @@ body{
     opacity: 1;
 }
 
+.mostAcclaimed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#mostAcclaimedContainer {
+    display: flex;
+    overflow-x: auto;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    flex-direction: row;
+}
+#mostAcclaimedContainer img {
+    margin-right: 15px;
+    width: 200px;
+    height: 300px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9f3647;
+    border-radius: 10px;
+}
+
 
 @media (min-width: 768px) {
     #bannerContainer {
@@ -194,5 +223,9 @@ body{
     #registerBtn{
         width: 140px;
         height: 70px;
+    }
+
+    .input-group {
+        width: 40%;
     }
 }
