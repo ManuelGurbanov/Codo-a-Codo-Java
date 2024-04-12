@@ -26,6 +26,7 @@ body{
     animation: fadeIn 1.5s;
 }
 #bannerContainer h1{
+    max-width: 70%;
     font-size: 3rem;
     font-weight: bolder;
     margin-bottom: 10px;
