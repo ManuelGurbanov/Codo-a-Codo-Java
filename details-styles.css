@@ -1,6 +1,18 @@
+body{
+    background-color: #181419;
+    font-family: "Roboto Flex", monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    color: white;
+    text-align: center;
+}
+
 #detailsBanner{
     width: 100vw;
-    height: 70vh;
+    height: 150vh;
     background: linear-gradient(to right top, #6d6969a7, #575353a7), url("https://giselemilagros88.github.io/cac_movies_javaphp/assets/img/mario-bg.jpg");
     background-size: cover;
     background-position: center;
@@ -8,37 +20,88 @@
 
 #detailsBanner img{
     border-radius: 40px;
+    width: 200px;
+    height: 306px;
+    margin: 0 auto;
 }
 
-#detailsContainer{
-    width: 80%;
+#detailsContainer {
+    width: 75%;
     margin: 120px auto 200px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
+    max-width: 80vw;
+}
+
+#detailsContainer > div {
+    text-align: center;
 }
 #peopleWorkedContainer{
     display: flex;
-    flex-direction: row;
-    gap: 70px;
+    flex-direction: column;
+    gap: 10px;
 }
 
 #trailerSection{
     width: 100%;
-    background-color: rgb(56, 56, 56);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: 120px auto 200px auto;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 40px;
 }
 
-@media (min-width: 768px) {
+iframe{
+    max-width: 80vw;
+}
+
+#rightBox{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    height: 100%;
+}
+#gridInfo{
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+}
+
+.bold{
+    font-weight: 900;
+}
+p{
+    text-align: left;
+}
+
+#socialMedia{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+#socialMedia img {
+    width: 40px;
+    height: 40px;
+}
+
+@media (min-width: 900px) {
     #detailsContainer{
         width: 90%;
+        flex-direction: row;
+    }
+    #detailsBanner{
+        height: 70vh;
+    }
+    #trailerSection{
+        flex-direction: row;
+    }
+    #peopleWorkedContainer{
+        display: flex;
         flex-direction: row;
     }
 }

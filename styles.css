@@ -11,6 +11,7 @@
     align-items: center;
     text-align: center;
     height: 70vh;
+    margin-top: 66px;
 }
 #bannerContainer h1, h2, h3{
     animation: fadeIn 1.5s;
@@ -131,7 +132,6 @@ h1{
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
@@ -210,6 +210,12 @@ h1{
     position: fixed;
     bottom: 50px;
     right: 50px
+}
+
+hr{
+    border: 2px solid #9f3647;
+    width: 70vw;
+    margin: 80px auto 80px auto;
 }
 
 @media (min-width: 768px) {
