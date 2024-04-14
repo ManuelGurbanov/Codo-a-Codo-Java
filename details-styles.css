@@ -1,0 +1,44 @@
+#detailsBanner{
+    width: 100vw;
+    height: 70vh;
+    background: linear-gradient(to right top, #6d6969a7, #575353a7), url("https://giselemilagros88.github.io/cac_movies_javaphp/assets/img/mario-bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#detailsBanner img{
+    border-radius: 40px;
+}
+
+#detailsContainer{
+    width: 80%;
+    margin: 120px auto 200px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+#peopleWorkedContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+}
+
+#trailerSection{
+    width: 100%;
+    background-color: rgb(56, 56, 56);
+    display: flex;
+    flex-direction: row;
+    margin: 120px auto 200px auto;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+@media (min-width: 768px) {
+    #detailsContainer{
+        width: 90%;
+        flex-direction: row;
+    }
+}

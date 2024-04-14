@@ -1,6 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+body{
+    background-color: rgb(7, 7, 9);
+    font-family: "Roboto Flex", monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    color: white;
+}
+
+
 footer{
-    margin-top: 100px;
-    color: #ffffff;
+    color: white;
     background-color: #9f3647;
 }
 footer a{
@@ -16,9 +28,12 @@ footer a{
 
 .navbar{
     background-color: #9f3647;
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
 }
 .navbar .nav-link {
-    color: #ffffff;
+    color: white;
     margin: 0 20px 0 20px;
 }
 
@@ -26,7 +41,8 @@ footer a{
     color: #ffffff65;
 }
 
-#loginLink{
+.darkBG{
+    padding: 0.7rem 2rem;
     background-color: #9f3647;
 }
 
@@ -36,8 +52,28 @@ footer a{
 }
 
 @media (min-width: 768px) {
-    #loginLink{
+    .darkBG{
         background-color: #551d26;
         border-radius: 50px;
     }
+}
+
+form{
+    margin: 0 20px 100px 20px;
+}
+form h1{
+    width: 100%;
+}
+form a{
+    color: #ffffff65;
+    text-align: left;
+    width: 100%;
+}
+
+form button{
+    width: 100%;
+}
+
+form input{
+    box-sizing: border-box;
 }
