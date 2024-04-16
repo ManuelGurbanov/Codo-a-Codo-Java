@@ -17,16 +17,13 @@
 <body>
 
   <!-- Bootstrap Navbar -->
-  <nav class="navbar navbar-expand-lg">
+  <!-- <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand" href="index.html">
         <img src="./img/netflix-logo.png" width="112" height="40" class="d-inline-block align-top" alt="Logo de Netflix" id="nefliLogo">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link" href="#moviesSection">Tendencias</a>
           </li>
@@ -39,7 +36,23 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> -->
+
+  <header>
+    <div id="navContainer">
+      <div id="logo">
+        <a class="navbar-brand" href="index.html">
+          <img src="./img/netflix-logo.png" width="112" height="40" alt="Logo de Netflix" id="nefliLogo">
+        </a>
+      </div>
+      <div id="links">
+            <a class="nav-link" href="#moviesSection">Tendencias</a>
+            <a class="nav-link" href="register.html">Registrarse</a>
+            <a class="nav-link darkBG" href="login.html">Iniciar Sesión</a>
+      </div>
+    </div>
+  </header>
+
 
   <section id="bannerContainer">
       <h1>Películas y series ilimitadas en un solo lugar.</h1>
@@ -53,7 +66,7 @@
   <!-- Boostrap Search -->
   <section id="searcherContainer">
     <div class="input-group rounded">
-      <h1>¿Buscando algo en especial?</h1>
+      <h1>¿Qué estás buscando para ver?</h1>
       <input type="search" class="form-control rounded" placeholder="Película o Serie..." aria-label="Search" aria-describedby="search-addon" />
       <button type="button" class="btn" id="searchButton">Buscar</button>
     </div>
