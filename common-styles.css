@@ -31,35 +31,28 @@ footer a{
 
 header{
     background-color: #9f3647;
-    height: 18vh;
+    height: auto;
 }
-#navContainer{
+header div{
+    margin-top: 20px;
     display: flex;
     align-items: center;
-    flex-direction: column;
     justify-content: center;
-    gap: 40px;
-    margin: 20px 20px 0 20px;
-
-    max-width: 95vw;    
 }
-#links{
-    width: 100%;    
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-    font-size: .7rem;
+.row {
+    width: 100vw;
+    margin-bottom: 10px;
 }
-.link{    
+.link {
     color: white;
-    padding: .4rem 2rem;
+    padding: 0.4rem 1.5rem;
     text-decoration: none;
+    margin: 0 10px;
 }
 .link:hover{
     box-shadow: 0 0 15px rgb(52, 52, 52);
     transition: ease-in .1s;
-     background-color: #9f3647; /*for the buttons that have black bg */
+    background-color: #9f3647;
 }
 .darkBG{
     background-color: #1e0a0e;
@@ -70,22 +63,12 @@ header{
     transition: .1s ease-in-out;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 770px) {
     header{
         height: 10vh;
     }
     .footerBtns{
         flex-direction: row;
-    }
-    #navContainer{
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    #links{
-        width: fit-content;
-        font-size: 1.2rem;
     }
     .link{    
         margin-right: 20px;

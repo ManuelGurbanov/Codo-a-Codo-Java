@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
 
+@keyframes zoomIn {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+}
+  
 #bannerContainer {
     color: white;
     background: url(./img/banner.jpg);
@@ -11,16 +22,16 @@
     align-items: center;
     text-align: center;
     height: 50vh;
-    /* margin-top: 18vh; */
 }
 #bannerContainer h1, h2, h3{
-    animation: fadeIn 1.5s;
+    animation: zoomIn 1.5s;
     max-width: 80%;
 }
 #bannerContainer h1{
     font-size: 2.2rem;
     font-weight: bolder;
     margin-bottom: 10px;
+    animation: zoomIn 1.5s;
 }
 #bannerContainer h2{
     font-size: 1.8rem;
@@ -50,10 +61,6 @@
     font-weight: 200;
 }
 
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
 #mainBanner {
     height: 100%;
     width: auto;
@@ -119,11 +126,11 @@
     align-items: center;
 }
 
-h1{
+/* h1{
     color: white;
     font-size: 2rem;
     margin: 50px 0 50px 0;
-}
+} */
 
 #moviesGrid {
     width: 70vw;
