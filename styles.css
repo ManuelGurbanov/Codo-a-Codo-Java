@@ -147,8 +147,7 @@
 }
 
 .movie:hover img {
-    filter: grayscale(90%);
-    filter: brightness(20%);
+    filter: grayscale(90%) brightness(20%) blur(2px);
     scale: .92;
     transition: ease-in .15s;
 }
@@ -170,7 +169,10 @@
     opacity: 1;
 }
 
-.mostAcclaimed {
+#mostAcclaimed h1, #moviesSection h1 {
+    margin-bottom: 70px;
+}
+#mostAcclaimed {
     display: flex;
     justify-content: center;
     align-items: center;

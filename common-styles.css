@@ -18,6 +18,8 @@ footer{
 }
 footer a{
     color: white;
+    width: 80%;
+    text-align: center;
 }
 .footerBtns{
     width: 60%;
