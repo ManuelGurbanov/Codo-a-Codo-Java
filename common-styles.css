@@ -33,7 +33,11 @@ footer a{
 
 header{
     background-color: #9f3647;
+    width: 100vw;
     height: auto;
+    position: fixed;
+    top: 0;
+    z-index: 10;
 }
 header div{
     margin-top: 20px;

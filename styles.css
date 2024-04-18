@@ -231,7 +231,9 @@
 }
 
 hr{
-    border: 2px solid #9f3647;
+    border: 1px solid white;
+    background-color: #ff2f52;
+    height: 10px;
     width: 70vw;
     margin: 80px auto 80px auto;
 }
