@@ -79,6 +79,13 @@
     height: 60px;
 }
 
+.whiteHover:hover{
+    scale: .95;
+    transition: .1s ease-in-out;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.461);
+}
+
+
 #searcherContainer {
     height: 50vh;
     display: flex;
@@ -119,6 +126,7 @@
     position: relative;
     display: flex;
     justify-content: center;
+    border-radius: 40px;
 }
 
 #moviesSection{
@@ -138,6 +146,15 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
+.movie:hover{
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.493);
+    transition: ease-in .15s;
+    scale: .92;
+}
+.movie:hover img {
+    filter: grayscale(50%) brightness(20%) blur(2px);
+    transition: ease-in .15s;
+}
 .movie img {
     width: 100%;
     height: 100%;
@@ -146,11 +163,7 @@
     max-width: 230px;
 }
 
-.movie:hover img {
-    filter: grayscale(90%) brightness(20%) blur(2px);
-    scale: .92;
-    transition: ease-in .15s;
-}
+
 .movieTittle {
     opacity: 0;
     position: absolute;
