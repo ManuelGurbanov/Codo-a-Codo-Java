@@ -9,7 +9,10 @@ body{
     align-content: center;
     color: white;
 }
-
+a{
+    text-decoration: none;
+    color: white;
+}
 
 footer{
     width: 100vw;
@@ -76,9 +79,16 @@ i{
     text-align: center;
     font-weight: bolder;
 }
-#logoContainer:hover{
+#logoContainer:hover, #logoContainerForm:hover{
     animation: shake 1s;
     animation-iteration-count: infinite;
+}
+
+#logoContainerForm{
+    font-size: 1.2rem;
+    position: fixed;
+    top: 30px;
+    left: 60px;
 }
 
 
@@ -123,4 +133,16 @@ form button{
 
 form input{
     box-sizing: border-box;
+}
+
+#navLinksDiv{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+@media (min-width: 768px) {
+    #navLinksDiv{
+        justify-content: end;
+    }
 }

@@ -242,13 +242,17 @@ hr{
         height: 90vh;
         margin-top: 8vh;
     }
-    #mainTittle {
-        font-size: 3rem;
+
+    #bannerContainer h1{
+        font-size: 3.2rem;
     }
-    
-    #mainDescription {
+    #bannerContainer h2{
+        font-size: 2.6rem;
+    }
+    #bannerContainer h3{
         font-size: 2rem;
     }
+       
 
     #registerBtn{
         width: 140px;
