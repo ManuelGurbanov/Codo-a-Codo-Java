@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 body {
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@ body {
     align-items: center;
     background:linear-gradient(to right top, #1e1e1e73,#13131373), url(./img/bg-register.jpg);
 
-    font-family: "Roboto Flex", monospace;
+    font-family: "Nunito", monospace;
 }
 
 #formSection {

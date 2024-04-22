@@ -1,6 +1,6 @@
 body{
     background-color: #181419;
-    font-family: "Roboto Flex", monospace;
+    font-family: "Nunito", monospace;
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,6 +11,7 @@ body{
 }
 
 #detailsBanner{
+    margin-top: 10vh;
     width: 100vw;
     height: 150vh;
     background: linear-gradient(to right top, #6d6969a7, #575353a7), url("https://giselemilagros88.github.io/cac_movies_javaphp/assets/img/mario-bg.jpg");
@@ -20,9 +21,7 @@ body{
 
 #detailsBanner img{
     border-radius: 40px;
-    width: 200px;
-    height: 306px;
-    margin: 0 auto;
+    height: 406px;
 }
 
 #detailsContainer {
@@ -42,7 +41,7 @@ body{
 #peopleWorkedContainer{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    justify-content: space-between;
 }
 
 #trailerSection{
@@ -73,8 +72,11 @@ iframe{
 .bold{
     font-weight: 900;
 }
-p{
+p, h1, h3, h4{
     text-align: left;
+}
+h4{
+    font-weight: 100;
 }
 
 #socialMedia{

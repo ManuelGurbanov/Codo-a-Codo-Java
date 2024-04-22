@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 body{
     background-color: rgb(7, 7, 9);
-    font-family: "Roboto Flex", monospace;
+    font-family: "Nunito", monospace;
     margin: 0;
     padding: 0;
     display: flex;
@@ -58,6 +58,7 @@ header div{
     padding: 0.2rem 0.6rem;;
     text-decoration: none;
     margin: 0 10px;
+    text-align: center;
 }
 
 /* The footer links don't have footer anim */
@@ -67,6 +68,7 @@ header .link:hover{
     background-color: #9f3647;
 }
 .darkBG{
+    border-radius: 7px;
     background-color: #1e0a0e;
 }
 i{
@@ -140,7 +142,9 @@ form input{
     justify-content: center;
     flex-direction: row;
 }
-
+.container{
+    max-width: 90vw;
+}
 @media (min-width: 768px) {
     #navLinksDiv{
         justify-content: end;

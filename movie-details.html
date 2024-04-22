@@ -13,6 +13,9 @@
   <!-- Styles -->
   <link href="common-styles.css" rel="stylesheet">
   <link href="details-styles.css" rel="stylesheet">
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
 </head>
 <body>
@@ -35,10 +38,10 @@
     </div>
   </header>
 
-  <section id="detailsBanner">
+  <section id="detailsBanner"  data-aos="zoom-in" data-aos-duration="1500">
     <div id="detailsContainer">
       <div>
-        <img src="https://giselemilagros88.github.io/cac_movies_javaphp/assets/img/mario.jpg" alt="Portada Mario Bros">
+        <img src="https://giselemilagros88.github.io/cac_movies_javaphp/assets/img/mario.jpg" alt="Portada Mario Bros" id="movieMiniBanner"> 
       </div>
       <div>
         <h1>The Super Mario Bros. Movie (2023)</h1>
@@ -48,22 +51,22 @@
         <div id="peopleWorkedContainer">
           <div>
             <h3>Aaron Horvath</h3>
-            <p>Director</p>
+            <h4>Director</h4>
           </div>
           <div>
             <h3>Michael Jelenic</h3>
-            <p>Director</p>
+            <h4>Director</h4>
           </div>
           <div>
             <h3>Matthew Fogel</h3>
-            <p>Writer</p>
+            <h4>Writer</h4>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="trailerSection">
+  <section id="trailerSection" data-aos="fade-up" data-aos-duration="500">
       <div>
         <h1>Ver Trailer</h1>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/RjNcTBXTk4I?si=7fnK8NtlxetW0d1R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
@@ -100,6 +103,11 @@
 
   <!-- Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/7e976723c9.js" crossorigin="anonymous"></script>
 </body>
