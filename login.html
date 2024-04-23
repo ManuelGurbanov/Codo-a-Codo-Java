@@ -7,7 +7,8 @@
 
   <!-- Link to Netflix icon-->
   <link rel="icon" type="image/x-icon" href="./img/netflix-small.webp">
-  
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Styles -->
   <link href="common-styles.css" rel="stylesheet">
   <link href="forms-styles.css" rel="stylesheet">
@@ -19,7 +20,7 @@
       <span>CAC-Movies</span>
     </a>
   </div>
-  <div id="formSection">
+  <div id="formSection" data-aos="zoom-in" data-aos-duration="900">
     <form action="" id="LoginForm">
       <h1>Inicio de Sesión</h1>
 
@@ -30,7 +31,11 @@
       <a href="register.html">Registrarme</a>
     </form>
   </div>
-
+  <!-- AOS Animation -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
    <!-- Font Awesome -->
    <script src="https://kit.fontawesome.com/7e976723c9.js" crossorigin="anonymous"></script>
