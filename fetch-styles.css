@@ -27,6 +27,7 @@
  }
 
 #searchContainer button{
+   color: white;
    background-color: #9f3647;
    border-radius: 60px;
    height: 40px;
@@ -41,4 +42,9 @@
     border-radius: 40px;
     max-width: 230px;
     max-height: 345px;
+}
+
+#loadingTittle{
+    margin: 20px 0 20px 0;
+    display: none;
 }
