@@ -1,6 +1,6 @@
 // Reemplaza '[yourkey]' con tu API Key válida
 const apiKey = 'abf601b2';
-const apiUrl = `http://www.omdbapi.com/?apikey=${apiKey}&`;
+const apiUrl = `https://www.omdbapi.com/?apikey=${apiKey}&`;
 
 async function searchMovies() {
     const searchInput = document.getElementById('searchInput').value;
