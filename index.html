@@ -31,9 +31,17 @@
         <div class="col-12 col-md-10 ml-md-4" id="navLinksDiv">
           <a class="link" href="register.html">Registrarse</a>
           <a class="link" href="login.html">Iniciar Sesión</a>
-          <a class="link darkBG" href="fetch.html">Buscar Películas (API)</a>
+
+          <button id="showMenu">
+            <a>Buscar Películas (API)</a>
+          <button>
         </div>
       </div>
+    </div>
+
+
+    <div id="hiddenMenu">
+      <p>¡Usá el buscador en esta misma web para probar la API!</p>
     </div>
   </header>
   
@@ -54,8 +62,13 @@
   <section id="searcherContainer" data-aos="fade-up" data-aos-delay="120" data-aos-duration="2200">
     <div class="input-group">
       <h1>¿Qué estás buscando para ver?</h1>
-      <input type="search" class="form-control rounded" placeholder="Película o Serie..." aria-label="Search" aria-describedby="search-addon" />
-      <button class="whiteHover" id="searchButton">Buscar</button>
+      <input id="searchInput" type="search" class="form-control rounded" placeholder="Película o Serie..." aria-label="Search" aria-describedby="search-addon" />
+      <button class="whiteHover" id="searchButton" onclick="searchMovies()">Buscar</button>
+    </div>
+    <h1 class="loadingTittle"></h1>
+
+
+    <div id="resultsGrid" class="moviesGrid">
     </div>
   </section>
 
@@ -63,7 +76,7 @@
 
   <section id="moviesSection" data-aos="fade-up" data-aos-delay="120" data-aos-duration="1200">
     <h1>Tendencias</h1>
-    <div id="moviesGrid">
+    <div class="moviesGrid">
       <div class="movie">
         <a href="movie-details.html">
           <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" alt="Interestellar">
@@ -340,5 +353,8 @@
   </script>
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/7e976723c9.js" crossorigin="anonymous"></script>
+
+  <!-- Script para el fetch de la API -->
+  <script src="fetch.js"></script>
 </body>
 </html>
