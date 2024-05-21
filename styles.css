@@ -112,7 +112,7 @@
 
 .input-group {
     width: 70%;
-    margin-top: 40px;
+    margin-top: 60px;
     margin-bottom: 40px;
 }
 .input-group h1 {
@@ -163,6 +163,7 @@
 
 #resultsGrid{
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
 }
 #moviesGrid{
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -179,14 +180,14 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 40px;
+    border-radius: 30px;
     max-width: 230px;
 }
 
 #resultsGrid img{
     width: 100%;
     height: 100%;
-    max-width: 85px;
+    border-radius: 10px;
 }
 
 
@@ -205,7 +206,7 @@
 }
 
 #resultsGrid .movieTittle{
-    font-size: 20px;
+    font-size: 12px;
 }
 
 .movie:hover .movieTittle {
@@ -322,6 +323,7 @@ hr{
         width: 100%;
         height: 100%;
         max-width: 200px;
+        border-radius: 30px;
     }
 
     #resultsGrid{
@@ -329,6 +331,6 @@ hr{
     }
 
     #resultsGrid .movieTittle{
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
 }

@@ -48,8 +48,8 @@ function displayMovies(movies) {
                     <a href="movie-details.html">
                         <img src="${movie.Poster}" alt="${movie.Title}" class="">
                     </a>
-                    <div class="movieTittle">
-                        <h5>${movie.Title}</h5>
+                    <div>
+                        <h5 class="movieTittle">${movie.Title}</h5>
                     </div>
                 `;
                 resultsGrid.appendChild(movieElement);
