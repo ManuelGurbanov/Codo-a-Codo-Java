@@ -62,7 +62,7 @@ header div{
 }
 
 /* The footer links don't have footer anim */
-header .link:hover{
+header .link:hover , button:hover{
     box-shadow: 0 0 15px rgb(52, 52, 52);
     transition: ease-in .1s;
     background-color: #9f3647;
@@ -142,6 +142,7 @@ form input{
     justify-content: center;
     flex-direction: row;
 }
+
 .container{
     max-width: 90vw;
 }
