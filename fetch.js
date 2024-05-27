@@ -1,32 +1,35 @@
-const apiKey = 'abf601b2';
-const apiUrl = `https://www.omdbapi.com/?apikey=${apiKey}&`;
+const apiKey = '9c5168c50cf088f187f440e7a13a9b8e';
+const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=es-ES&query=`;
 
-//para hacer unas pruebas sin tirar muchas solicitudes a la API (1.000 máx diario)
-//const apiUrl = ``;
 loadingTittle = document.getElementsByClassName('loadingTittle');
 
 async function searchMovies() {
     const searchInput = document.getElementById('searchInput').value;
 
-    if (searchInput == "")
-        {
-            loadingTittle[0].innerHTML = "Introducí algún término para buscar!"
-        }else{
-            const response = await fetch(`${apiUrl}s=${searchInput}`);
+    if (searchInput === "") {
+        loadingTittle[0].innerHTML = "Introducí algún término para buscar!";
+    } else {
+        loadingTittle[0].innerHTML = "Buscando películas...";
+        
+        try {
+            const response = await fetch(`${apiUrl}${searchInput}`);
             const data = await response.json();
-            displayMovies(data.Search);
+            displayMovies(data.results);
 
-            loadingTittle[0].innerHTML = "Buscando películas..."
+        } catch (error) {
+            console.error('Error fetching data from TMDB:', error);
+            loadingTittle[0].innerHTML = "Error al buscar películas.";
         }
+    }
 }
 
-showMenu = document.getElementById('showMenu')
+showMenu = document.getElementById('showMenu');
 
 showMenu.addEventListener('click', function() {
     const hiddenMenu = document.getElementById('hiddenMenu');
     if (hiddenMenu.style.display !== "block") {
         hiddenMenu.style.display = "block";
-    }else{
+    } else {
         hiddenMenu.style.display = "none";
     }
 }, false);
@@ -38,43 +41,61 @@ function displayMovies(movies) {
     let count = 0;
     const maxItems = 12;
 
-    if (count < maxItems)
-    {
-            movies.forEach(movie => {
-                const movieElement = document.createElement('div');
-                movieElement.classList.add('movie');
-                movieElement.innerHTML = 
-                `
-                    <a href="movie-details.html">
-                        <img src="${movie.Poster}" alt="${movie.Title}" class="">
-                    </a>
-                    <div>
-                        <h5 class="movieTittle">${movie.Title}</h5>
-                    </div>
-                `;
-                resultsGrid.appendChild(movieElement);
-            });
-        count++; //para que no se muestren muchísimas películas cuando la búsqueda no es muy precisa
-    }
+    movies.slice(0, maxItems).forEach(movie => {
+        const movieElement = document.createElement('div');
+        movieElement.classList.add('movie');
+        movieElement.innerHTML = 
+        `
+            <a href="movie-details.html">
+                <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" class="">
+            </a>
+            <div>
+                <h5 class="movieTittle">${movie.title}</h5>
+            </div>
+        `;
+        resultsGrid.appendChild(movieElement);
+    });
 
     loadingTittle[0].style.display = "none";
 }
 
+// Ahora busco las películas populares en la API
 
-//funcion para que el título de buscar tenga un margen acorde al tamaño de la navbar, ya que en celulares
-//se superponian al tener posición absoluta
+const popularMoviesUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=es-ES`;
 
-/*
-document.addEventListener('DOMContentLoaded', function() {
-    var header = document.querySelector('header');
-    var navbarHeight = header.offsetHeight;
-    var searcherTittle = document.querySelector('#searcherTittle');
-
-    if (navbarHeight > 300)
-    {
-        searcherTittle.style.marginTop = navbarHeight + 'px';
-    }else{
-        searcherTittle.style.marginTop = navbarHeight / 2 + 'px';
+async function getPopularMovies() {
+    try {
+        const response = await fetch(popularMoviesUrl);
+        const data = await response.json();
+        displayPopularMovies(data.results); // TMDB devuelve los resultados en la propiedad 'results'
+    } catch (error) {
+        console.error('Error fetching popular movies from TMDB:', error);
     }
+}
+
+function displayPopularMovies(movies) {
+    const moviesGrid = document.getElementById('moviesGrid');
+    moviesGrid.innerHTML = '';
+
+    let count = 0;
+    const maxItems = 40;
+
+    movies.slice(0, maxItems).forEach(movie => {
+        const movieElement = document.createElement('div');
+        movieElement.classList.add('movie');
+        movieElement.innerHTML = 
+        `
+            <a href="movie-details.html">
+                <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" class="">
+            </a>
+            <div class="movieTittle">
+                <h5>${movie.title}</h5>
+            </div>
+        `;
+        moviesGrid.appendChild(movieElement);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    getPopularMovies();
 });
-*/
