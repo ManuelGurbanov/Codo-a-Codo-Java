@@ -3,6 +3,8 @@ const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&lang
 
 loadingTittle = document.getElementsByClassName('loadingTittle');
 
+let currentPage = 1;
+
 async function searchMovies() {
     const searchInput = document.getElementById('searchInput').value;
 
@@ -38,7 +40,6 @@ function displayMovies(movies) {
     const resultsGrid = document.getElementById('resultsGrid');
     resultsGrid.innerHTML = '';
 
-    let count = 0;
     const maxItems = 12;
 
     movies.slice(0, maxItems).forEach(movie => {
@@ -60,18 +61,33 @@ function displayMovies(movies) {
 }
 
 // Ahora busco las películas populares en la API
+function nextPage() {
+    currentPage++;
+    getPopularMovies(currentPage);
+}
 
-const popularMoviesUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=es-ES`;
+function previousPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        getPopularMovies(currentPage);
+    }
+}
 
-async function getPopularMovies() {
+async function getPopularMovies(page = 1) {
+    const popularMoviesUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=es-ES&page=${page}`;
+    
     try {
         const response = await fetch(popularMoviesUrl);
         const data = await response.json();
-        displayPopularMovies(data.results); // TMDB devuelve los resultados en la propiedad 'results'
+        totalPages = data.total_pages;
+        displayPopularMovies(data.results);
     } catch (error) {
         console.error('Error fetching popular movies from TMDB:', error);
     }
 }
+
+document.getElementById('nextButton').addEventListener('click', nextPage);
+document.getElementById('prevButton').addEventListener('click', previousPage);
 
 function displayPopularMovies(movies) {
     const moviesGrid = document.getElementById('moviesGrid');
@@ -99,3 +115,6 @@ function displayPopularMovies(movies) {
 document.addEventListener('DOMContentLoaded', function() {
     getPopularMovies();
 });
+
+
+
