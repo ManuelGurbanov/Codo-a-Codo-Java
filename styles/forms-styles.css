@@ -7,7 +7,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background:linear-gradient(to right top, #1e1e1e73,#13131373), url(./img/bg-register.jpg);
+    background:linear-gradient(to right top, #1e1e1e73,#13131373), url(../img/bg-register.jpg);
 
     font-family: "Nunito", monospace;
 }
