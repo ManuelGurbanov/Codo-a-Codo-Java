@@ -48,7 +48,7 @@ function displayMovies(movies) {
         movieElement.innerHTML = 
         `
             <a href="movie-details.html">
-                <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" class="">
+                <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
             </a>
             <div>
                 <h5 class="movieTittle">${movie.title}</h5>
@@ -56,11 +56,10 @@ function displayMovies(movies) {
         `;
         resultsGrid.appendChild(movieElement);
     });
-
     loadingTittle[0].style.display = "none";
 }
 
-// Ahora busco las películas populares en la API
+
 function nextPage() {
     currentPage++;
     getPopularMovies(currentPage);
@@ -89,6 +88,10 @@ async function getPopularMovies(page = 1) {
 document.getElementById('nextButton').addEventListener('click', nextPage);
 document.getElementById('prevButton').addEventListener('click', previousPage);
 
+function handleImageError(image) {
+    image.closest('.movie').classList.add('hidden');
+}
+
 function displayPopularMovies(movies) {
     const moviesGrid = document.getElementById('moviesGrid');
     moviesGrid.innerHTML = '';
@@ -102,7 +105,7 @@ function displayPopularMovies(movies) {
         movieElement.innerHTML = 
         `
             <a href="movie-details.html">
-                <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" class="">
+                <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" onerror="handleImageError(this)">
             </a>
             <div class="movieTittle">
                 <h5>${movie.title}</h5>
@@ -115,6 +118,3 @@ function displayPopularMovies(movies) {
 document.addEventListener('DOMContentLoaded', function() {
     getPopularMovies();
 });
-
-
-
