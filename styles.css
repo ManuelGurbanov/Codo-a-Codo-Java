@@ -102,7 +102,7 @@
 #searcherContainer {
     overflow: hidden;
     gap: 40px;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -112,7 +112,7 @@
 
 .input-group {
     width: 70%;
-    margin-top: 60px;
+    margin-top: 80px;
     margin-bottom: 40px;
 }
 .input-group h1 {
